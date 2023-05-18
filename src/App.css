@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  height: 113vh;
+  width: 100%;
+  background: linear-gradient(45deg, #03dbf7, #89f055, #ded0c0, #e91087);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.container .image-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.container .image-container .image {
+  height: 250px;
+  width: 350px;
+  border: 5px solid #a6a6de;
+  box-shadow: 0 5px 15px rgb(0, 0, 0, .1);
+  overflow: hidden;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+}
+
+.container .image-container .image:hover img {
+  transform: scale(1.1);
+}
+
+.text {
+  text-align: center;
+  letter-spacing: 7px;
+  text-decoration: underline;
+}
+
+.textt {
+  margin-top: auto;
+  margin-bottom: 8px;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.text-box {
+  border: 5px solid #c5c3d7;
+  border-radius: 6px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: #f7f0b5;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
